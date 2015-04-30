@@ -1,0 +1,9 @@
+# binary
+txtrocket
+gin-bin
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+
+# DotEnv
+.env
