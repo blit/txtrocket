@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/unrolled/render"
 )
@@ -10,7 +11,7 @@ var r *render.Render
 
 func init() {
 	r = render.New(render.Options{
-		Directory:     "/Users/troy/Projects/txtrocket/templates",
+		Directory:     os.Getenv("TXTR_APP_ROOT") + "/templates",
 		IsDevelopment: true,
 		//      Layout: "layouts/layout",
 		Extensions: []string{".html"},
